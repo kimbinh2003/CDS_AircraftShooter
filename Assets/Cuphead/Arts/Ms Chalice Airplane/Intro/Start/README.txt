@@ -1,0 +1,1 @@
+Full intro in "Cuphead (Airplane)." If you wish to use Mugman, download "Mugman (Airplane)."
