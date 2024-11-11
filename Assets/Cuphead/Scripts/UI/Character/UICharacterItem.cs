@@ -9,7 +9,7 @@
 
         public void Setup()
         {
-            if (PlayerPrefs.GetInt("CharacterSelected") == id)
+            if (PlayerPrefs.GetInt("CharacterSelected", 0) == id)
             {
                 characterImage.SetActive(true);
             }

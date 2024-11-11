@@ -4,15 +4,14 @@ public class UIStoreUserItem : MonoBehaviour
 {
     public int id;
     public UIStoreUser store;
-    public UICharacter character;
 
     public GameObject useButton;
     public GameObject usedButton;
     public void Setup()
     {
-        if (PlayerPrefs.HasKey("Character_" + id)) // neu da mua
+        if (PlayerPrefs.HasKey("Character_" + id) || id == 0) // neu da mua
         {
-            if (PlayerPrefs.GetInt("CharacterSelected") == id)
+            if (PlayerPrefs.GetInt("CharacterSelected", 0) == id)
             {
                 usedButton.SetActive(true);
                 useButton.SetActive(false);

@@ -30,18 +30,21 @@ public class CharacterMovement : MonoBehaviour
         float yVertical = Input.GetAxisRaw("Vertical"); // lay truc doc len tren, xuong duoi -1 -> 1
 
         transform.position = transform.position + new Vector3(xHorizontal, yVertical, 0) * speedMovement * Time.deltaTime;
-        
-        if (yVertical > 0)
+
+        if (characterAnimation != null)
         {
-            characterAnimation.SetInt("idle_direction", 1);
-        }
-        if (yVertical < 0)
-        {
-            characterAnimation.SetInt("idle_direction", -1);
-        }
-        if (yVertical == 0)
-        {
-            characterAnimation.SetInt("idle_direction", 0);
+            if (yVertical > 0)
+            {
+                characterAnimation.SetInt("idle_direction", 1);
+            }
+            if (yVertical < 0)
+            {
+                characterAnimation.SetInt("idle_direction", -1);
+            }
+            if (yVertical == 0)
+            {
+                characterAnimation.SetInt("idle_direction", 0);
+            }
         }
     }
 }
