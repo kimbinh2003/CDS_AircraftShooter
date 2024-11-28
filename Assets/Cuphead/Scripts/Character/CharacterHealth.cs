@@ -7,14 +7,15 @@ public class CharacterHealth : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
 
-    private void Start()
+    public virtual void Start()
     {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         currentHealth -= damage;
+
         Debug.Log(gameObject.name + " Take damage: " + damage);
         if (currentHealth <= 0)
         {

@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 7592852450932337583}
   - component: {fileID: 9053920841760215056}
   - component: {fileID: 4433988531957264094}
+  - component: {fileID: -2624431532770828863}
   m_Layer: 0
   m_Name: 04_Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,8 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9970103eb8252a449afcdcf19e3d8fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  currentHealth: 20
+  maxHealth: 140
+  currentHealth: 140
 --- !u!114 &7592852450932337583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPos: {fileID: 4485899032479765778}
-  bulletPrefab: {fileID: 3851198669144758997, guid: 9e8609aec76220745acace3ab2c31ee9, type: 3}
+  bulletPrefab: {fileID: 3851198669144758997, guid: 1365898f668681f4cad5d11a876d9280, type: 3}
 --- !u!114 &4433988531957264094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +140,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotBehavior: {fileID: 9053920841760215056}
   timeBtwShot: 0.8
+--- !u!114 &-2624431532770828863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119073443916846686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436372489e8e7604e86ce6e584e81a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &857950352742679345
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +197,7 @@ GameObject:
   - component: {fileID: 6463731164281088253}
   m_Layer: 0
   m_Name: CupheadGraphics
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

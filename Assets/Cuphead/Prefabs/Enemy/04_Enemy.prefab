@@ -77,9 +77,10 @@ GameObject:
   - component: {fileID: 8269280159183090221}
   - component: {fileID: 7065206150667541364}
   - component: {fileID: 8845575403361162457}
+  - component: {fileID: -6875327369771331697}
   m_Layer: 0
   m_Name: 04_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9970103eb8252a449afcdcf19e3d8fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  currentHealth: 20
+  maxHealth: 70
+  currentHealth: 70
 --- !u!114 &8269280159183090221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +188,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotBehavior: {fileID: 7065206150667541364}
   timeBtwShot: 1
+--- !u!114 &-6875327369771331697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8455560708887468860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436372489e8e7604e86ce6e584e81a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8931793068743438861
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +213,7 @@ GameObject:
   - component: {fileID: 8433312353029734569}
   m_Layer: 0
   m_Name: CupheadGraphics
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

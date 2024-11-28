@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5060966129506571038}
   m_Layer: 0
   m_Name: ChaliceGraphics
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 5057058317000622716}
   m_Layer: 0
   m_Name: 01_Chalice
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

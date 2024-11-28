@@ -7,9 +7,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject cupHeadCharacterPrefab;
-    public GameObject chaliceCharacterPrefab;
-    public GameObject mugmanCharacterPrefab;
+    public GameObject character00, character01, character02,
+        character03, character04, character05;
 
     public int TestCharacter = -1;
 
@@ -27,17 +26,30 @@ public class GameController : MonoBehaviour
         if (characterSelected == 0)
         {
             // Sinh ra cupHead
-            Instantiate(cupHeadCharacterPrefab);
+            Instantiate(character00);
         }
         else if (characterSelected == 1)
         {
             // Chalice
-            Instantiate(chaliceCharacterPrefab);
+            Instantiate(character01);
         }
-        else if (characterSelected == 1)
+        else if (characterSelected == 2)
         {
             // Chalice
-            Instantiate(mugmanCharacterPrefab);
+            Instantiate(character02);
         }
+        else if (characterSelected == 3)
+        {
+            Instantiate(character03);
+        }
+        else if (characterSelected == 4)
+        {
+            Instantiate(character04);
+        }
+        else if (characterSelected == 5)
+        {
+            Instantiate(character05);
+        }
+
     }
 }

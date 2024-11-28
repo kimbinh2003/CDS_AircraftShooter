@@ -27,13 +27,25 @@ public class EnemyInWave
 
 public class MapConfiguration : MonoBehaviour
 {
+    private LevelConfiguration levelMap;
     public Wave wave1;
     public List<Transform> spawnPoints;
+    public int totalEnemyLeft;
 
-
-    private void Start()
+    public void StartWave()
     {
+        totalEnemyLeft = wave1.Enemies.Count;
         LevelSpawnEnemy();
+    }
+
+    public void KillEnemy()
+    {
+        totalEnemyLeft--;
+        if (totalEnemyLeft == 0)
+        {
+            // next wave
+            levelMap.NextWave();
+        }
     }
 
     private void LevelSpawnEnemy()
@@ -45,6 +57,7 @@ public class MapConfiguration : MonoBehaviour
         }
     }
 
+
     IEnumerator SpawnEnemy(EnemyInWave enemyData)
     {
         yield return new WaitForSeconds(enemyData.timeSpawn);
@@ -54,10 +67,22 @@ public class MapConfiguration : MonoBehaviour
         var randomPoints = spawnPoints[Random.Range(0, spawnPoints.Count)];
 
         var enemy = Instantiate(prefab, randomPoints.position, prefab.transform.rotation);
+        var enemyScrip = enemy.GetComponent<Enemy>();
+        enemyScrip.SetMapConfiguration(this);
         if (enemy.GetComponent<EnemyAutoMoveToTargetPos>() != null)
         {
             var autoMove = enemy.GetComponent<EnemyAutoMoveToTargetPos>();
             autoMove.SetPosition(randomPoints);
         }
+    }
+
+    public void SetLevelConfiguration(LevelConfiguration levelConfiguration)
+    {
+        this.levelMap = levelConfiguration;
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 }

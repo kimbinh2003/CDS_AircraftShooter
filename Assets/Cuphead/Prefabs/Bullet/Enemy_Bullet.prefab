@@ -75,6 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   damage: 5
+  isPlayerBullet: 0
 --- !u!1 &3867060141256662798
 GameObject:
   m_ObjectHideFlags: 0

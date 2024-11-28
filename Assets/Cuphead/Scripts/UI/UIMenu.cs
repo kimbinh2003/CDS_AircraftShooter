@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIMenu : MonoBehaviour
 {
@@ -36,4 +37,8 @@ public class UIMenu : MonoBehaviour
         uiStoreUser.CloseUI();
     }
 
+    public void Play()
+    {
+        SceneManager.LoadScene("Level");
+    }
 }
