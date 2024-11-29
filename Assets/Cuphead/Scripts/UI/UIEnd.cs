@@ -7,9 +7,12 @@ using UnityEngine.SceneManagement;
 public class UIEnd : MonoBehaviour
 {
     public GameObject uiSetting;
+    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI starText;
     private void Start()
     {
-        
+        moneyText.SetText("" + PlayerPrefs.GetInt("Money"));
+        starText.SetText("" + PlayerPrefs.GetInt("Star"));
     }
     public void OpenSettingUI()
     {
@@ -25,8 +28,8 @@ public class UIEnd : MonoBehaviour
     {
         SceneManager.LoadScene("Start");
     }
-    public void ExitGame()
+    public void NextGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Level");
     }
 }

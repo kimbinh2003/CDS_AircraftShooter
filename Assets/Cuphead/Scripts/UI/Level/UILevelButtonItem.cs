@@ -6,6 +6,7 @@ public class UILevelButtonItem : MonoBehaviour
     public int level;
     public GameObject playGame;
     public GameObject winGame;
+    public DataUser dataUer;
 
     public void Setup()
     {
@@ -27,5 +28,11 @@ public class UILevelButtonItem : MonoBehaviour
         PlayerPrefs.SetInt("Current_Level", level);
 
         Setup();
+    }
+    public void WinGame()
+    {
+        dataUer.GameOver();
+        winGame.SetActive(true);
+        playGame.SetActive(false);
     }
 }

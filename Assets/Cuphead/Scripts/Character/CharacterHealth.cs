@@ -21,6 +21,7 @@ public class CharacterHealth : MonoBehaviour
         {
             Debug.Log(gameObject.name + " - DEATH");
             Destroy(gameObject);
+            FindAnyObjectByType<DataUser>().GameOver();
         }
     }
 }

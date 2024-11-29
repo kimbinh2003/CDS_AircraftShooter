@@ -886,7 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvBar: {fileID: 245511695}
-  speed: 0
+  speed: 0.2
 --- !u!1 &279403584
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvBar: {fileID: 279403586}
-  speed: 0
+  speed: 0.2
 --- !u!1 &466050154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvBar: {fileID: 1768133307}
-  speed: 0
+  speed: 0.2
 --- !u!1 &573159132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvBar: {fileID: 1920844289}
-  speed: 0
+  speed: 0.2
 --- !u!1 &658285254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvBar: {fileID: 252251961}
-  speed: 0
+  speed: 0.2
 --- !u!1 &1003679354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,7 +2659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
+  m_Color: {r: 0.01886791, g: 0.017906714, b: 0.017906714, a: 0.9372549}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
