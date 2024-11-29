@@ -24,6 +24,8 @@ public class UILevelButtonItem : MonoBehaviour
     public void PlayOnClicked()
     {
         PlayerPrefs.SetInt("Level_Unlock_" + level, 1);
+        PlayerPrefs.SetInt("Current_Level", level);
+
         Setup();
     }
 }
