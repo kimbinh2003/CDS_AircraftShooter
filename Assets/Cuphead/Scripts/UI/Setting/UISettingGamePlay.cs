@@ -8,6 +8,7 @@ public class UISettingGamePlay : MonoBehaviour
     public void CloseUI()
     {
         gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
     public GameObject musicModeOn;
     public GameObject musicModeOff;

@@ -42,7 +42,6 @@ public class MapConfiguration : MonoBehaviour
     {
         totalEnemyLeft--;
         DataUser.AddMoney(5);
-        Debug.Log("Enemy killed! Remaining enemies: " + totalEnemyLeft);
         if (totalEnemyLeft == 0)
         {
             // next wave

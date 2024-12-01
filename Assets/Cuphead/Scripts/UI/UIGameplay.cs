@@ -19,10 +19,12 @@ public class UIGameplay : MonoBehaviour
     public void OpenUISettingGameplay()
     {
         uiSettingGameplay.SetActive(true);
+        Time.timeScale = 0;
     }
     public GameObject uiPauseSettings;
     public void OpenUIPauseSettings()
     {
         uiPauseSettings.SetActive(true);
+        Time.timeScale = 0;
     }
 }

@@ -52,10 +52,6 @@ public class DataUser : MonoBehaviour
             {
                 star = 1;  
             }
-            else
-            {
-                star = 0;  
-            }
         }
         else
         {
@@ -76,7 +72,6 @@ public class DataUser : MonoBehaviour
     {
         PlayerPrefs.SetInt("Money", money);
         PlayerPrefs.SetInt("Star", star);
-        Time.timeScale = 0;
         SceneManager.LoadScene("End");
     }
 

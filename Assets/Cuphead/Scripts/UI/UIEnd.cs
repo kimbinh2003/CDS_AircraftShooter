@@ -11,8 +11,8 @@ public class UIEnd : MonoBehaviour
     public TextMeshProUGUI starText;
     private void Start()
     {
-        moneyText.SetText("" + PlayerPrefs.GetInt("Money"));
-        starText.SetText("" + PlayerPrefs.GetInt("Star"));
+        moneyText.SetText("" + PlayerPrefs.GetInt("Money"), 0);
+        starText.SetText("" + PlayerPrefs.GetInt("Star"), 0);
     }
     public void OpenSettingUI()
     {

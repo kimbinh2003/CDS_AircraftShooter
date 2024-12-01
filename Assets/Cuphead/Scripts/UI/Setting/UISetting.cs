@@ -13,9 +13,27 @@ public class UISetting : MonoBehaviour
     public GameObject musicOffGameObject;
     public GameObject soundOnGameObject;
     public GameObject soundOffGameObject;
+    public TextMeshProUGUI Total_Money;
+    public TextMeshProUGUI Total_Star;
     
+
     private void Start()
     {
+     
+        int TotalMoney = PlayerPrefs.GetInt("TotalMoney", 0);
+        int CurrentMoney = PlayerPrefs.GetInt("Money");
+
+        TotalMoney += CurrentMoney;
+        PlayerPrefs.SetInt("TotalMoney", TotalMoney);
+        Total_Money.SetText("" + PlayerPrefs.GetInt("TotalMoney", 0));
+
+        int TotalStar = PlayerPrefs.GetInt("TotalStar", 0);
+        int CurrentStar = PlayerPrefs.GetInt("Star");
+
+        TotalStar += CurrentStar;
+        PlayerPrefs.SetInt("TotalStar", TotalStar);
+        Total_Star.SetText("" + PlayerPrefs.GetInt("Star", 0));
+
 
         if (PlayerPrefs.GetInt("Music", 1) == 1)
         {

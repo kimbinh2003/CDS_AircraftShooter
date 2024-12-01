@@ -8,6 +8,7 @@ public class UIPauseSetting : MonoBehaviour
     public void CloseUI()
     {
         gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
     public void ReSume()
     {
