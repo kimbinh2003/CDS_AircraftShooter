@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UILevelButtonItem : MonoBehaviour
@@ -6,32 +7,31 @@ public class UILevelButtonItem : MonoBehaviour
     public int level;
     public GameObject playGame;
     public GameObject winGame;
-    public DataUser dataUer;
-
+    public TextMeshProUGUI levelText;
     public void Setup()
     {
-        if (PlayerPrefs.HasKey("Level_Unlock_" + level))
-        {
-            playGame.SetActive(true);
-            winGame.SetActive(false);
-            SceneManager.LoadScene("GamePlay");
-        }
-        else
+        levelText.SetText("" + level);
+        if (PlayerPrefs.HasKey("Level_Win_" + level))
         {
             playGame.SetActive(false);
             winGame.SetActive(true);
+        }
+        else
+        {
+            playGame.SetActive(true);
+            winGame.SetActive(false);
         }
     }
     public void PlayOnClicked()
     {
         PlayerPrefs.SetInt("Level_Unlock_" + level, 1);
         PlayerPrefs.SetInt("Current_Level", level);
+        //Setup();
 
-        Setup();
+        SceneManager.LoadScene("Gameplay");
     }
     public void WinGame()
     {
-        dataUer.GameOver();
         winGame.SetActive(true);
         playGame.SetActive(false);
     }

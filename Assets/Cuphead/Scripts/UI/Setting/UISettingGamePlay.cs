@@ -40,12 +40,14 @@ public class UISettingGamePlay : MonoBehaviour
     }
     public void musicOn()
     {
+        FindObjectOfType<AudioManager>().SetMusic(0);
         PlayerPrefs.SetInt("Music", 0);
         musicModeOn.SetActive(false);
         musicModeOff.SetActive(true);
     }
     public void musicOff()
     {
+        FindObjectOfType<AudioManager>().SetMusic(1);
         PlayerPrefs.SetInt("Music", 1);
         musicModeOn.SetActive(true);
         musicModeOff.SetActive(false);

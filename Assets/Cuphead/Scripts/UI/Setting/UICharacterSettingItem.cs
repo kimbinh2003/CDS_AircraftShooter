@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class UICharacterSettingItem : MonoBehaviour
 {
-    public GameObject characterSettingImage;  
+    public GameObject characterImage;  
     public int id;
 
     public void Setup()
     {
         if (PlayerPrefs.GetInt("CharacterSelected", 0) == id)
         {
-            characterSettingImage.SetActive(true);
+            characterImage.SetActive(true);
         }
         else
-        {
-            
-            characterSettingImage.SetActive(false);
+        {           
+            characterImage.SetActive(false);
         }
     }
 }

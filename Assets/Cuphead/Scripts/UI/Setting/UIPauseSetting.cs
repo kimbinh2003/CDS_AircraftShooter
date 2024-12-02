@@ -15,11 +15,6 @@ public class UIPauseSetting : MonoBehaviour
         Time.timeScale = 1;
         gameObject.SetActive(false);
     }
-
-    public void Restart()
-    {
-        
-    }
     public void EndGame()
     {
         Time.timeScale = 1;

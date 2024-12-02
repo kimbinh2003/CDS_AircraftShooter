@@ -7,8 +7,7 @@ public class LevelController : MonoBehaviour
 {
     void Start()
     {
-        var levels = GameObject.Find("Levels");
-        var currentLevel = levels.GetComponent<Transform>().GetChild(PlayerPrefs.GetInt("Current_Level") - 1);
+        var currentLevel = gameObject.transform.GetChild(PlayerPrefs.GetInt("Current_Level") - 1);
         currentLevel.gameObject.SetActive(true);
     }
 }

@@ -35,7 +35,6 @@ public class GameController : MonoBehaviour
         }
         else if (characterSelected == 2)
         {
-            // Chalice
             Instantiate(character02);
         }
         else if (characterSelected == 3)

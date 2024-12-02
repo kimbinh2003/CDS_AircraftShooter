@@ -41,12 +41,11 @@ public class MapConfiguration : MonoBehaviour
     public void KillEnemy()
     {
         totalEnemyLeft--;
-        DataUser.AddMoney(5);
+        FindObjectOfType<DataUser>().AddMoney(5);
         if (totalEnemyLeft == 0)
         {
             // next wave
             levelMap.NextWave();
-            Debug.Log("Wave completed! Moving to the next wave.");
         }
     }
 

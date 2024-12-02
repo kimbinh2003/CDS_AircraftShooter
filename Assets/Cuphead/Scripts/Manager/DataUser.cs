@@ -1,20 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
-using System.Threading;
+
+public enum EndGameState
+{
+    Win,
+    Lose
+}
+
+
 public class DataUser : MonoBehaviour
 {
-    public static int money = 0;
+    public int money = 0;
     public TextMeshProUGUI moneyText;
     private float remainingTime;
-    public static int time;
+    public int time;
     public TextMeshProUGUI timeRemainText;
-    public static int star;
-    public bool allWavesCompleted;
+    public int star;
+    //public bool allWavesCompleted;
+    public LevelConfiguration levelConfiguration;
 
-    public static void AddMoney(int amount)
+    public void AddMoney(int amount)
     {
         money += amount;
         Debug.Log("Money added: " + amount + ". Current money: " + money);
@@ -23,11 +30,10 @@ public class DataUser : MonoBehaviour
     {
         remainingTime += amount;
     }
-    public int TimePlay;
-    void Start() 
+    void Start()
     {
         money = 0;
-        remainingTime = TimePlay; 
+        remainingTime = time;
         StartCoroutine(CountdownTimer());
     }
 
@@ -38,24 +44,21 @@ public class DataUser : MonoBehaviour
     }
     public void CurrentStar()
     {
-        if (allWavesCompleted) 
+        if (remainingTime >= 50)
         {
-            if (remainingTime >= 50)
-            {
-                star = 3;  
-            }
-            else if (remainingTime >= 30)
-            {
-                star = 2;  
-            }
-            else if (remainingTime > 0)
-            {
-                star = 1;  
-            }
+            star = 3;
+        }
+        else if (remainingTime >= 30)
+        {
+            star = 2;
+        }
+        else if (remainingTime > 0)
+        {
+            star = 1;
         }
         else
         {
-            star = 0;  
+            star = 0;
         }
     }
     private IEnumerator CountdownTimer()
@@ -65,14 +68,30 @@ public class DataUser : MonoBehaviour
             yield return new WaitForSeconds(1f);
             remainingTime--;
         }
-        GameOver();
+        GameOver(EndGameState.Lose);
     }
 
-    public void GameOver()
+    public void GameOver(EndGameState endGameType)
     {
+        CurrentStar();
+        if (endGameType == EndGameState.Lose)
+        {
+            star = 0;
+            money = 0;
+        }
+
+        if (endGameType == EndGameState.Win)
+        {
+            int levelCurrent = PlayerPrefs.GetInt("Current_Level");
+            // Set win game
+            PlayerPrefs.SetInt("Level_Win_" + levelCurrent, 1);
+            // Level_Win_1
+            // Level_Win_2
+
+        }
+
         PlayerPrefs.SetInt("Money", money);
         PlayerPrefs.SetInt("Star", star);
         SceneManager.LoadScene("End");
     }
-
 }
