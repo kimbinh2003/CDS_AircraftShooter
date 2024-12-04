@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9970103eb8252a449afcdcf19e3d8fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   maxHealth: 60
   currentHealth: 60
 --- !u!114 &4292891037547092133
@@ -143,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPos: {fileID: 8698017992414696872}
   bulletPrefab: {fileID: 3851198669144758997, guid: 9e8609aec76220745acace3ab2c31ee9, type: 3}
+  shotSFX: {fileID: 0}
 --- !u!114 &1765513069850528141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,9 +288,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000006462598, y: 0.054212205}
+  m_Offset: {x: 0.0000000072096906, y: 0.060479276}
   serializedVersion: 2
-  m_Radius: 0.40710595
+  m_Radius: 0.40083888
 --- !u!1 &5885209450640309371
 GameObject:
   m_ObjectHideFlags: 0

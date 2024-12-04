@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 4260238484078062467}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.9, y: 0.001, z: 0}
+  m_LocalPosition: {x: -0.964, y: 0.001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9970103eb8252a449afcdcf19e3d8fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   maxHealth: 80
   currentHealth: 80
 --- !u!114 &1097096580187409122
@@ -262,6 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPos: {fileID: 7551878981816181800}
   bulletPrefab: {fileID: 3851198669144758997, guid: 9e8609aec76220745acace3ab2c31ee9, type: 3}
+  shotSFX: {fileID: 0}
 --- !u!114 &7447569644079405554
 MonoBehaviour:
   m_ObjectHideFlags: 0

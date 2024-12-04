@@ -199,6 +199,8 @@ GameObject:
   - component: {fileID: 3209129907909611460}
   - component: {fileID: 1046984287200990268}
   - component: {fileID: 3531054819420201684}
+  - component: {fileID: 4710137328715601649}
+  - component: {fileID: 4775303022319383496}
   m_Layer: 0
   m_Name: 03_Boss
   m_TagString: Enemy
@@ -324,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotBehavior: {fileID: 3209129907909611460}
-  timeBtwShot: 0.8
+  timeBtwShot: 1
 --- !u!114 &3531054819420201684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +339,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436372489e8e7604e86ce6e584e81a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4710137328715601649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561115339597413754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6652ac27c4ae55c47881f4aa22401a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPos: {fileID: 3230233655512076169}
+  bulletPrefab: {fileID: 3851198669144758997, guid: 1365898f668681f4cad5d11a876d9280, type: 3}
+  shotSFX: {fileID: 0}
+--- !u!114 &4775303022319383496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561115339597413754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70dc3bb0fd3ba084b866b68e4b485897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotBehavior: {fileID: 4710137328715601649}
+  timeBtwShot: 1
 --- !u!1 &8949631143664890291
 GameObject:
   m_ObjectHideFlags: 0

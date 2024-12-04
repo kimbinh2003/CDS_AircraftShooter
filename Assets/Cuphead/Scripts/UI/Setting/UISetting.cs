@@ -19,11 +19,14 @@ public class UISetting : MonoBehaviour
     public GameObject[] characters;
 
 
+    private void Start()
+    {
+        currencyManagement();
+        starManagement();
+    }
     private void OnEnable()
     {
 
-        currencyManagement();
-        starManagement();
         setCharacter();
 
         if (PlayerPrefs.GetInt("Music", 1) == 1)
