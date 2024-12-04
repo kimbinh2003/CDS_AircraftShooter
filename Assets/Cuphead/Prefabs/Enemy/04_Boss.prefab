@@ -93,8 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9970103eb8252a449afcdcf19e3d8fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 140
-  currentHealth: 140
+  isPlayer: 0
+  maxHealth: 200
+  currentHealth: 200
 --- !u!114 &7592852450932337583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPos: {fileID: 4485899032479765778}
   bulletPrefab: {fileID: 3851198669144758997, guid: 1365898f668681f4cad5d11a876d9280, type: 3}
+  shotSFX: {fileID: 0}
 --- !u!114 &4433988531957264094
 MonoBehaviour:
   m_ObjectHideFlags: 0

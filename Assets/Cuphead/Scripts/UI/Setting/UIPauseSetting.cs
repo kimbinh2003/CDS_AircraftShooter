@@ -19,7 +19,7 @@ public class UIPauseSetting : MonoBehaviour
     {
         Time.timeScale = 1;
         gameObject.SetActive(false);
-        SceneManager.LoadScene("End");
+        FindObjectOfType<DataUser>().GameOver(EndGameState.Lose);
     }
     
 }

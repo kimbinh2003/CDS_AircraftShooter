@@ -18,10 +18,6 @@ public class UISetting : MonoBehaviour
     public TextMeshProUGUI Total_Star;
     public GameObject[] characters;
 
-    private void Start()
-    {
-        
-    }
 
     private void OnEnable()
     {

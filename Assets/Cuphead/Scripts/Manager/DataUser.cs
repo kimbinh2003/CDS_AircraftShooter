@@ -73,7 +73,7 @@ public class DataUser : MonoBehaviour
 
     public void GameOver(EndGameState endGameType)
     {
-        CurrentStar();
+        
         if (endGameType == EndGameState.Lose)
         {
             star = 0;
@@ -87,7 +87,7 @@ public class DataUser : MonoBehaviour
             PlayerPrefs.SetInt("Level_Win_" + levelCurrent, 1);
             // Level_Win_1
             // Level_Win_2
-
+            CurrentStar();
         }
 
         PlayerPrefs.SetInt("Money", money);

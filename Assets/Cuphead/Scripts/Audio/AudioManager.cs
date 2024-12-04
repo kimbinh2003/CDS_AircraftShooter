@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Music") == 1)
         {
-            SetMusic(0.5f);
+            SetMusic(1);
         }
         else
         {

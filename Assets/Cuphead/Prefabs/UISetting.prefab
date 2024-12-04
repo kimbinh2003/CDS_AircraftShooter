@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2297731817073972544}
         m_TargetAssemblyTypeName: UISetting, Assembly-CSharp
         m_MethodName: soundON
         m_Mode: 1
@@ -2506,7 +2506,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2297731817073972544}
         m_TargetAssemblyTypeName: UISetting, Assembly-CSharp
         m_MethodName: musicOFF
         m_Mode: 1
@@ -2714,7 +2714,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2297731817073972544}
         m_TargetAssemblyTypeName: UISetting, Assembly-CSharp
         m_MethodName: soundOFF
         m_Mode: 1
@@ -3249,7 +3249,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2297731817073972544}
         m_TargetAssemblyTypeName: UISetting, Assembly-CSharp
         m_MethodName: musicON
         m_Mode: 1
