@@ -67,7 +67,8 @@ public class UISettingGamePlay : MonoBehaviour
     public void BackToMenu()
     {
         Time.timeScale = 1;
+        FindObjectOfType<DataUser>().GameOver(EndGameState.Lose);
         SceneManager.LoadScene("Start");
     }
-   
+
 }

@@ -141,7 +141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c2e7690c46484042ab9cae735360b93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39013e0a1f28c8d43997801cf61acd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -579,7 +579,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3865207721112255801}
         m_TargetAssemblyTypeName: UILevelButtonItem, Assembly-CSharp
-        m_MethodName: WinGame
+        m_MethodName: PlayGameAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -646,6 +646,7 @@ MonoBehaviour:
   lock_PlayGame: {fileID: 1705621259392723194}
   winGame: {fileID: 6243606051967459206}
   levelText: {fileID: 7240091954773648518}
+  textLevel: {fileID: 3779921338394584155}
 --- !u!1 &8600213891609047679
 GameObject:
   m_ObjectHideFlags: 0

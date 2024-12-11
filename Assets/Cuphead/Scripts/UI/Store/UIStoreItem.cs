@@ -12,9 +12,7 @@ public class UIStoreItem : MonoBehaviour
     public GameObject canBuyObject;
     public GameObject boughtObject;
     // Start is called before the first frame update
-    void Start()
-    {
-    }
+
 
     public void Setup()
     {
@@ -35,7 +33,21 @@ public class UIStoreItem : MonoBehaviour
 
     public void BuyOnClicked()
     {
-        PlayerPrefs.SetInt("Character_" + id, 1);
-        Setup();
+        int totalMoney = PlayerPrefs.GetInt("TotalMoney", 0);
+
+        if (totalMoney >= price)
+        {
+            totalMoney -= price;
+            PlayerPrefs.SetInt("TotalMoney", totalMoney);
+            PlayerPrefs.SetInt("Character_" + id, 1);
+
+            Setup();
+
+            Debug.Log("Purchase successful!");
+        }
+        else
+        {
+            Debug.Log("Not enough money to buy this character.");
+        }
     }
 }

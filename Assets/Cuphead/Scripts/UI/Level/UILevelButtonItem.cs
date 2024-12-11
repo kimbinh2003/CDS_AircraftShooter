@@ -9,6 +9,7 @@ public class UILevelButtonItem : MonoBehaviour
     public GameObject lock_PlayGame;
     public GameObject winGame;
     public TextMeshProUGUI levelText;
+    public GameObject textLevel;
     public void Setup()
     {
         levelText.SetText("" + level);
@@ -28,6 +29,7 @@ public class UILevelButtonItem : MonoBehaviour
         {
             playGame.SetActive(true);
             lock_PlayGame.SetActive(false);
+            textLevel.SetActive(true);
             winGame.SetActive(false);
         }
         // Trường hợp 2: Người chơi đã thắng level này
@@ -35,6 +37,7 @@ public class UILevelButtonItem : MonoBehaviour
         {
             playGame.SetActive(false);
             lock_PlayGame.SetActive(false);
+            textLevel.SetActive(true);
             winGame.SetActive(true);
         }
         // Trường hợp 3: Level bị khóa vì không nằm liền kề level vừa thắng
@@ -42,6 +45,7 @@ public class UILevelButtonItem : MonoBehaviour
         {
             playGame.SetActive(false);
             lock_PlayGame.SetActive(true);
+            textLevel.SetActive(false);
             winGame.SetActive(false);
         }
     }
@@ -52,7 +56,7 @@ public class UILevelButtonItem : MonoBehaviour
         //Setup();
         SceneManager.LoadScene("Gameplay");
     }
-    public void WinGame()
+    public void PlayGameAgain()
     {
         SceneManager.LoadScene("Gameplay");
     }

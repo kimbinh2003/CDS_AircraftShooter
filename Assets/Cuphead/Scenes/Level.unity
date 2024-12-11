@@ -400,8 +400,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 769.52893, y: 0}
-  m_SizeDelta: {x: 1539.0581, y: 0}
+  m_AnchoredPosition: {x: 453.36975, y: 0}
+  m_SizeDelta: {x: 906.7397, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &826242232
 GameObject:
@@ -693,6 +693,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 826008763}
     m_Modifications:
+    - target: {fileID: 1705621259392723194, guid: 8bb1f4a7652d62f4eb0dd635714892f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3015759017017470007, guid: 8bb1f4a7652d62f4eb0dd635714892f4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1190,6 +1194,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 826008763}
     m_Modifications:
+    - target: {fileID: 1705621259392723194, guid: 8bb1f4a7652d62f4eb0dd635714892f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3015759017017470007, guid: 8bb1f4a7652d62f4eb0dd635714892f4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
